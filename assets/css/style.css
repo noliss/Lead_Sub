@@ -186,10 +186,65 @@
     background: linear-gradient(93.76deg, #0568FF -27.36%, #31A0FD 121.33%);
     cursor: pointer;
     filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
-    transition: all 0.3s linear;
+    /* transition: all 0.3s linear; */
     color: #FFFFFF;
     border-radius: 12px;
+    overflow: hidden;
+    transition: 1s ease;
 }
+
+.site-button:focus {
+    outline: 0; 
+}
+
+.site-button:before {
+    content: '';
+    display: block;
+    position: absolute;
+    background: linear-gradient(93.76deg, #0568FF -27.36%, #31A0FD 121.33%);
+    width: 60px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: .5;
+    filter: blur(30px);
+    transform: translateX(-100px) skewX(-15deg); 
+}
+
+.site-button:after {
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.2);
+    width: 30px;
+    height: 100%;
+    left: 30px;
+    top: 0;
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100px) skewX(-15deg); 
+}
+
+.site-button:hover {
+    /* background: #338033; */
+    cursor: pointer; 
+    background: #FFFFFF;
+    color: #222431;
+    filter: drop-shadow(5px 5px 15px rgba(34, 36, 49, 0.25));
+}
+
+.site-button:hover:before {
+    transform: translateX(300px) skewX(-15deg);
+    opacity: 0.6;
+    transition: .7s; 
+}
+
+.site-button:hover:after {
+    transform: translateX(300px) skewX(-15deg);
+    opacity: 1;
+    transition: .7s;
+}
+  
 
 .menu-limit__button {
     padding: 10px 50px;
@@ -199,12 +254,6 @@
     line-height: 17px;
     letter-spacing: 0.03em;
     margin-top: 25px;
-}
-
-.site-button:hover {
-    background: #FFFFFF;
-    color: #222431;
-    filter: drop-shadow(5px 5px 15px rgba(34, 36, 49, 0.25));
 }
 
 .mailing {
@@ -218,7 +267,7 @@
     justify-content: space-between;
     align-items: center;
     background: #FFFFFF;
-    max-height: 95px;
+    max-height: 90px;
     box-shadow: 0px 5px 20px rgba(190, 190, 190, 0.35); 
 }
 
@@ -246,13 +295,6 @@
     color: #FFFFFF;
 }
 
-.mailing-header__button:hover {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 22px;
-}
-
 .mailing-table {
     margin-top: 33px;
     margin-left: 60px;
@@ -261,8 +303,8 @@
 
 .mailing-table__head {
     display: flex;
-    margin-left: 30px;
-    margin-right: 36px;
+    margin-left: 20px;
+    margin-right: 24px;
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
@@ -279,7 +321,7 @@
 
 .mailing-table__row-name {
     font-weight: 600;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 25px;
     color: #222431;
 }
@@ -312,9 +354,15 @@
 }
 
 .mailing-table__head-clicks, .mailing-table__row-clicks {
-    width: 383px;
-    max-width: 383px;
+    width: 125px;
+    max-width: 125px;
     min-width: 70px;
+}
+
+.mailing-table__head-status, .mailing-table__row-status {
+    width: 245px;
+    max-width: 245px;
+    min-width: 185px;
 }
 
 .mailing-table__row-send, .mailing-table__row-views, .mailing-table__row-clicks {
@@ -326,17 +374,22 @@
 }
 
 .mailing-table__head-date, .mailing-table__row-date {
-    width: 160px;
-    max-width: 160px;
+    width: 140px;
+    max-width: 140px;
     min-width: 140px;
+    margin-right: 20px;
 }
 
 .mailing-table__row-channel, .mailing-table__row-date {
     font-weight: 500;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 20px;
     letter-spacing: 0.03em;
     color: #222431;
+}
+
+.mailing-table__row-date {
+    font-size: 16px;
 }
 
 .mailing-table__row-edit, .mailing-table__head-edit {
@@ -346,7 +399,8 @@
 .mailing-table__row-edit {
     position: absolute;
     right: 0;
-    margin-right: 25px;
+    margin-right: 30px;
+    margin-left: 10px;
 }
 
 .mailing-table__row {
@@ -357,7 +411,7 @@
     box-shadow: 4px 4px 30px 4px rgba(170, 173, 178, 0.25);
     border-radius: 25px;
     border: 1px solid transparent;
-    padding: 30px;
+    padding: 16px 20px;
     transition: all 0.2s ease;
     cursor: pointer;
     position: relative;
@@ -370,7 +424,6 @@
 
 .mailing-table__row:hover {
     border: 1px solid #1C85FE;
-    padding: 30px;
 }
 
 .mailing-table__accord {
@@ -443,7 +496,7 @@
 .mailing-table__pagination {
     display: flex;
     flex-direction: row-reverse;
-    margin-top: 46px;
+    margin-top: 10%;
     margin-bottom: 25px;
 }
 
