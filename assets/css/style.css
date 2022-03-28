@@ -297,6 +297,7 @@
     display: flex;
     align-items: center;
     max-height: 37px;
+    /*  */
 }
 
 .mailing-table {
