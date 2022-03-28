@@ -345,7 +345,8 @@
 
 .mailing-table__row-edit {
     position: absolute;
-    margin-right: 20px;
+    right: 0;
+    margin-right: 25px;
 }
 
 .mailing-table__row {
