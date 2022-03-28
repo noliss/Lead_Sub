@@ -190,7 +190,7 @@
     color: #FFFFFF;
     border-radius: 12px;
     overflow: hidden;
-    transition: 1s ease;
+    transition: .6s ease;
 }
 
 .site-button:focus {
