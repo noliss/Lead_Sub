@@ -263,7 +263,7 @@
 }
 
 .mailing-header {
-    padding: 20px 60px;
+    padding: 16px 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -273,7 +273,7 @@
 }
 
 .mailing-header__title {
-    margin-bottom: 5px;
+    margin-bottom: 2px;
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
@@ -294,11 +294,14 @@
     font-size: 14px;
     line-height: 22px;
     color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    max-height: 37px;
 }
 
 .mailing-table {
     margin-top: 38px;
-    margin-left: 60px;
+    margin-left: 70px;
     margin-right: 60px;
 }
 
