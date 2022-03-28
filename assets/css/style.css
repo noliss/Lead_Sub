@@ -228,9 +228,9 @@
 .site-button:hover {
     /* background: #338033; */
     cursor: pointer; 
-    background: #FFFFFF;
+    background: rgb(249 249 248);
     color: #222431;
-    filter: drop-shadow(5px 5px 15px rgba(34, 36, 49, 0.25));
+    filter: drop-shadow(3px 3px 5px rgba(34, 36, 49, 0.25));
 }
 
 .site-button:hover:before {
