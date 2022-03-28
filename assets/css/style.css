@@ -12,7 +12,7 @@
 }
 
 .menu__logo {
-    padding: 25px 67px 31px 45px;
+    padding: 25px 40px 15px;
 }
 
 .menu-profile {
@@ -161,7 +161,7 @@
 .menu-limit__text {
     margin-left: 12px;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 17px;
     color: #717171;
 }
@@ -247,18 +247,19 @@
   
 
 .menu-limit__button {
-    padding: 10px 50px;
+    padding: 10px 20px;
     max-width: 212px;
     font-weight: 700;
     font-size: 14px;
     line-height: 17px;
     letter-spacing: 0.03em;
     margin-top: 25px;
+    text-align: center;
 }
 
 .mailing {
-    width: calc(100% - 262px);
-    margin-left: 262px;
+    width: calc(100% - 231px);
+    margin-left: 231px;
 }
 
 .mailing-header {
@@ -267,22 +268,22 @@
     justify-content: space-between;
     align-items: center;
     background: #FFFFFF;
-    max-height: 90px;
+    max-height: 85px;
     box-shadow: 0px 5px 20px rgba(190, 190, 190, 0.35); 
 }
 
 .mailing-header__title {
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     font-style: normal;
     font-weight: 700;
-    font-size: 22px;
+    font-size: 20px;
     line-height: 31px;
     color: #222431;
 }
 
 .mailing-header__subtitle {
     font-weight: 600;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 22px;
     color: #717171;
 }
@@ -290,13 +291,13 @@
 .mailing-header__button {
     padding: 10px 20px;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 14px;
     line-height: 22px;
     color: #FFFFFF;
 }
 
 .mailing-table {
-    margin-top: 33px;
+    margin-top: 38px;
     margin-left: 60px;
     margin-right: 60px;
 }
@@ -309,7 +310,7 @@
     font-size: 14px;
     line-height: 17px;
     color: #717171;
-    margin-bottom: 11px;
+    margin-bottom: 16px;
     max-width: 1538px;
 }
 
@@ -365,6 +366,10 @@
     min-width: 185px;
 }
 
+.mailing-table__row-status {
+    font-size: 16px;
+}
+
 .mailing-table__row-send, .mailing-table__row-views, .mailing-table__row-clicks {
     font-weight: 500;
     font-size: 14px;
@@ -383,7 +388,6 @@
 .mailing-table__row-channel, .mailing-table__row-date {
     font-weight: 500;
     font-size: 14px;
-    line-height: 20px;
     letter-spacing: 0.03em;
     color: #222431;
 }
@@ -415,7 +419,7 @@
     transition: all 0.2s ease;
     cursor: pointer;
     position: relative;
-    max-height: 80px;
+    max-height: 55px;
 }
 
 .mailing-table__row:last-child {
@@ -444,8 +448,8 @@
     padding: 5px 15px;
     transition: all 0.2s ease;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
+    font-size: 12px;
+    line-height: 14px;
     letter-spacing: 0.03em;
     color: #222431;
 }
@@ -496,7 +500,7 @@
 .mailing-table__pagination {
     display: flex;
     flex-direction: row-reverse;
-    margin-top: 10%;
+    margin-top: 14%;
     margin-bottom: 25px;
 }
 
@@ -512,6 +516,15 @@
     color: #222431;
 }
 
+.mailing-table__pagination-left {
+    transform: rotate(180deg)
+}
+
 .mailing-table__pagination-right, .mailing-table__pagination-left {
     cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.mailing-table__pagination-right:hover path, .mailing-table__pagination-left:hover path {
+    fill: #1C85FE;
 }
